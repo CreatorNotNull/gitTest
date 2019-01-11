@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.yueqian.com.dao.CategoryDao"><!-- 用于绑定dao接口 -->
+	<select id="getChildById" parameterType="int" resultMap="categoryChildResultMap">
+		SELECT c1.`id` as id1,c1.`name` as name1,c2.`id` as id2,c2.`name` as name2
+			FROM category  c1 LEFT JOIN category c2 
+			ON c1.id=#{id} AND c1.id = c2.`parent_id`
+		<!-- SELECT c1.`id` as id1,c1.`name` as name1,c2.`id` as id2,c2.`name` as name2
+			FROM category  c1 LEFT JOIN category c2 
+			ON parent_id=#{id} -->
+	</select>
+	<resultMap type="cn.yueqian.com.dao.entity.Category" id="categoryChildResultMap">
+		<id property="id" column="id1" />
+		<result property="name" column="name1" />
+		<collection property="childrens" ofType="cn.yueqian.com.dao.entity.Category">
+			<id property="id" column="id2" />
+			<result property="name" column="name2" />
+		</collection>
+	</resultMap>
+
+</mapper>
