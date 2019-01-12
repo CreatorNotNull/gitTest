@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="cn.jbit.domain">
+
+	<class name="User" table="tbl_user">
+		<id name="id">
+			<generator class="increment" />
+		</id>
+		<property name="myName" column="my_name" not-null="true" />
+		<property name="loginName" column="login_name" not-null="true" />
+		<property name="pass" not-null="true" />
+		<property name="email" not-null="true" />
+		<property name="sex" not-null="true"/>
+		<property name="image" column="user_img"/>
+		<property name="bornDay" column="born_day"/>
+		
+		<set name="orders" lazy="true">
+			<key column="user_id"/>
+			<one-to-many class="cn.jbit.domain.Order"/>
+		</set>
+	</class>
+
+</hibernate-mapping>

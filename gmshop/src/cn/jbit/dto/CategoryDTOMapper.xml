@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappings xmlns="http://dozer.sourceforge.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://dozer.sourceforge.net  
+           http://dozer.sourceforge.net/schema/beanmapping.xsd">
+
+	<mapping>
+		<class-a>cn.jbit.domain.Category</class-a>
+		<class-b>cn.jbit.dto.CategoryDTO</class-b>
+
+		<field>
+			<a>id</a>
+			<b>id</b>
+		</field>
+
+		<field>
+			<a>name</a>
+			<b>name</b>
+		</field>
+
+		<field>
+			<a>products</a>
+			<b>productsDTO</b>
+		</field>
+		<field>
+			<a>categories</a>
+			<b>categoriesDTO</b>
+		</field>
+	</mapping>
+</mappings>  
+

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappings xmlns="http://dozer.sourceforge.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://dozer.sourceforge.net  
+           http://dozer.sourceforge.net/schema/beanmapping.xsd">
+
+	<mapping>
+		<class-a>cn.jbit.domain.Product</class-a>
+		<class-b>cn.jbit.dto.ProductDTO</class-b>
+
+		<field>
+			<a>id</a>
+			<b>id</b>
+		</field>
+
+		<field>
+			<a>name</a>
+			<b>name</b>
+		</field>
+
+		<field>
+			<a>price</a>
+			<b>price</b>
+		</field>
+		<field>
+			<a>freight</a>
+			<b>freight</b>
+		</field>
+		<field>
+			<a>expireTime</a>
+			<b>expireTime</b>
+		</field>
+		<field>
+			<a>sellNum</a>
+			<b>sellNum</b>
+		</field>
+		<field>
+			<a>stockNum</a>
+			<b>stockNum</b>
+		</field>
+		<field>
+			<a>sellAddress</a>
+			<b>sellAddress</b>
+		</field>
+		<field>
+			<a>viewNum</a>
+			<b>viewNum</b>
+		</field>
+		<field>
+			<a>images</a>
+			<b>imagesDTO</b>
+		</field>
+		<field>
+			<a>category</a>
+			<b>categoryDTO</b>
+		</field>
+		
+		
+		
+	</mapping>
+</mappings>  
+

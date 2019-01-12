@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<package name="default" namespace="/" extends="struts-default">
+		
+		 <action name="userActionLogin" class="cn.jbit.action.UserAction" method="login" >
+			<result name="success">/login_success.jsp</result>
+			<result name="error">/login.jsp</result>
+		</action>
+		 <action name="userActionRegister" class="cn.jbit.action.UserAction" method="register" >
+			<result name="success">/register_success.jsp</result>
+			<result name="error">/register.jsp</result>
+		</action>
+	
+	
+
+		<action name="addCategoryAction" class="cn.jbit.action.CategoryAction" method="addCategory">
+			<result name="success">/back/show_category.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		
+		<action name="addProductAction" class="cn.jbit.action.ProductAction" method="addProduct">
+			<result name="success">/back/index.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		
+		<action name="showAllCategoryAction" class="cn.jbit.action.CategoryAction" method="showAllCategory">
+			<result name="success">/back/add_product.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		
+		<action name="showProduceDetailByIdAction" class="cn.jbit.action.ProductAction" method="showProduceDetailById">
+			<result name="success">/info.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		
+		<!-- 系统初始化 -->
+		<action name="initAction" class="cn.jbit.action.InitAction" >
+			<result name="success" type="redirect">/index.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		
+		<action name="showProductByCategoryAction" class="cn.jbit.action.ProductAction" method="showProductByCategory">
+			<result name="success">/catlist.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+	</package>
+
+</struts>

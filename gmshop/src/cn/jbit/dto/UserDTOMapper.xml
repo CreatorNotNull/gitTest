@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappings xmlns="http://dozer.sourceforge.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://dozer.sourceforge.net  
+           http://dozer.sourceforge.net/schema/beanmapping.xsd">
+
+	<mapping>
+		<class-a>cn.jbit.domain.User</class-a>
+		<class-b>cn.jbit.dto.UserDTO</class-b>
+
+		<field>
+			<a>id</a>
+			<b>id</b>
+		</field>
+
+		<field>
+			<a>myName</a>
+			<b>myName</b>
+		</field>
+
+		<field>
+			<a>loginName</a>
+			<b>loginName</b>
+		</field>
+		<field>
+			<a>pass</a>
+			<b>pass</b>
+		</field>
+		<field>
+			<a>email</a>
+			<b>email</b>
+		</field>
+		<field>
+			<a>sex</a>
+			<b>sex</b>
+		</field>
+		<field>
+			<a>image</a>
+			<b>image</b>
+		</field>
+		<field>
+			<a>bornDay</a>
+			<b>bornDay</b>
+		</field>
+		<field>
+			<a>orders</a>
+			<b>ordersDTO</b>
+		</field>
+		
+	</mapping>
+</mappings>  
+
