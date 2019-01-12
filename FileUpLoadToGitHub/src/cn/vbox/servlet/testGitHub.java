@@ -5,4 +5,7 @@ public class testGitHub {
 		System.out.println("233333");
 	}
 	public  void eclipse(){}
+	public void myeclipse() {
+		
+	}
 }
